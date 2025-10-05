@@ -1,0 +1,48 @@
+[
+    {
+      "model": "booking.movie",
+      "pk": 1,
+      "fields": {
+        "title": "Cosmic Drift",
+        "duration_minutes": 145
+      }
+    },
+    {
+      "model": "booking.movie",
+      "pk": 2,
+      "fields": {
+        "title": "The Last Wizard",
+        "duration_minutes": 120
+      }
+    },
+    {
+      "model": "booking.show",
+      "pk": 1,
+      "fields": {
+        "movie": 1,
+        "screen_name": "Screen 1 - Premium",
+        "date_time": "2025-10-07T18:00:00Z",
+        "total_seats": 50
+      }
+    },
+    {
+      "model": "booking.show",
+      "pk": 2,
+      "fields": {
+        "movie": 1,
+        "screen_name": "Screen 2 - Standard",
+        "date_time": "2025-10-07T21:00:00Z",
+        "total_seats": 100
+      }
+    },
+    {
+      "model": "booking.show",
+      "pk": 3,
+      "fields": {
+        "movie": 2,
+        "screen_name": "Screen 3 - IMAX",
+        "date_time": "2025-10-08T19:30:00Z",
+        "total_seats": 75
+      }
+    }
+  ]
