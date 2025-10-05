@@ -1,6 +1,6 @@
 # Movie Ticket Booking System Backend
 
-This repository contains the backend implementation for a movie ticket booking system built as an intern assignment.
+This repository contains the backend implementation for a movie ticket booking system .
 
 ## Tech Stack
 * **Primary Language:** Python
