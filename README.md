@@ -6,8 +6,8 @@ This repository contains the backend implementation for a movie ticket booking s
 * **Primary Language:** Python
 * **Web Framework:** Django
 * **API Framework:** Django REST Framework (DRF)
-* [cite_start]**Authentication:** JWT (via `djangorestframework-simplejwt`) [cite: 9]
-* [cite_start]**API Documentation:** Swagger UI (via `drf-spectacular`) [cite: 27]
+* **Authentication:** JWT (via `djangorestframework-simplejwt`) 
+* **API Documentation:** Swagger UI (via `drf-spectacular`) 
 
 ---
 
@@ -74,7 +74,7 @@ $$\text{http://127.0.0.1:8000/swagger/}$$
 
 ## 🔑 How to Generate JWT Tokens and Call APIs
 
-[cite_start]All booking-related APIs require a valid JWT token[cite: 10].
+All booking-related APIs require a valid JWT token.
 
 1.  **Register:** Send `POST` to `/signup/` with `username`, `email`, and `password`.
 2.  **Login:** Send `POST` to `/login/` with `username` and `password`. The response will provide the `access` token.
@@ -87,16 +87,16 @@ $$\text{http://127.0.0.1:8000/swagger/}$$
 
 | Endpoint | Method | Description | Auth Required |
 | :--- | :--- | :--- | :--- |
-| `/signup/` | `POST` | [cite_start]Register a user. [cite: 18] | No |
-| `/login/` | `POST` | [cite_start]Authenticate and return JWT token. [cite: 19] | No |
-| `/movies/` | `GET` | [cite_start]List all movies. [cite: 20] | No |
-| `/movies/<id>/shows/`| `GET` | [cite_start]List all shows for a movie. [cite: 21] | No |
-| `/shows/<id>/book/` | `POST` | [cite_start]Book a seat (Requires `seat_number`). [cite: 22, 23] | Yes |
-| `/bookings/<id>/cancel/`| `POST` | [cite_start]Cancel a booking. [cite: 24] | Yes |
-| `/my-bookings/` | `GET` | [cite_start]List all bookings for the logged-in user. [cite: 25] | Yes |
+| `/signup/` | `POST` | Register a user.  | No |
+| `/login/` | `POST` | Authenticate and return JWT token. | No |
+| `/movies/` | `GET` | List all movies.  | No |
+| `/movies/<id>/shows/`| `GET` | List all shows for a movie. | No |
+| `/shows/<id>/book/` | `POST` | Book a seat (Requires `seat_number`). | Yes |
+| `/bookings/<id>/cancel/`| `POST` | Cancel a booking. | Yes |
+| `/my-bookings/` | `GET` | List all bookings for the logged-in user. | Yes |
 
 ## Business Rules Implemented (Evaluation Criteria)
-* [cite_start]**Prevent Double Booking:** A seat cannot be booked twice for the same show[cite: 32].
-* [cite_start]**Prevent Overbooking:** Bookings do not exceed the show's capacity[cite: 33].
-* [cite_start]**Cancellation Logic:** Cancelling a booking updates the status and frees up the seat[cite: 34].
-* [cite_start]**Security:** A user cannot cancel another user's booking (Bonus Point)[cite: 56].
+* **Prevent Double Booking:** A seat cannot be booked twice for the same show.
+* **Prevent Overbooking:** Bookings do not exceed the show's capacity.
+* **Cancellation Logic:** Cancelling a booking updates the status and frees up the seat.
+* **Security:** A user cannot cancel another user's booking (Bonus Point).
